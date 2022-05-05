@@ -6,6 +6,7 @@ isFullTime=1;
 isPartTime=2;
 empWagePerHour=20;
 workingDays=20;
+workingHours=100;
 
 for (( day=1; day<=$workingDays; day++ ))
 do
