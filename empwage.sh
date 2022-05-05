@@ -2,14 +2,17 @@
 
 echo "welcome to employee wage computation"
 
-isPresent=1;
-randomCheck=$(( RANDOM%2 ));
+isFullTime=1;
+empWagePerHour=20;
 
-if [ $isPresent -eq $randomCheck ]
-then
-echo	"Employee is present"
+empCheck=$((RANDOM%2));
 
-else
-echo	"Employee is absent"
+case $empCheck in
+	$isFullTime)
+		empHrs=8;;
+	*)
+		empHrs=0;;
 
-fi
+esac
+
+salary=$(($empHrs * $empWagePerHour));
