@@ -5,10 +5,11 @@ echo "welcome to employee wage computation"
 isFullTime=1;
 isPartTime=2;
 empWagePerHour=20;
+workingDays=20;
 
-function Employee()
-{
-empCheck=$((RANDOM%3));
+for ((day=1; day<=$workingDays; day++))
+do
+	empCheck=$((RANDOM%3));
 	case $empCheck in
 		$isFullTime)
 			empHrs=8;;
@@ -18,7 +19,11 @@ empCheck=$((RANDOM%3));
 			empHrs=0;;
 
 	esac
-}
-Employee 
+
+dailyWage=$(( $empHrs * $empWagePerHour ));
+totalWage=$(( $dailyWage * $workingDays ));
+
+done
+
 
 
