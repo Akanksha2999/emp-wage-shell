@@ -9,6 +9,7 @@ workingDays=20;
 
 for ((day=1; day<=$workingDays; day++))
 do
+	echo "day is $day"
 	empCheck=$((RANDOM%3));
 	case $empCheck in
 		$isFullTime)
@@ -24,6 +25,7 @@ dailyWage=$(( $empHrs * $empWagePerHour ));
 totalWage=$(( $dailyWage * $workingDays ));
 
 done
+
 
 
 
